@@ -19,8 +19,8 @@ namespace RealEstate
         public DateTime CreateAt { get; set; }
         public Seller Seller { get; set; }
         public Category Category { get; set; }
-        public double SzelessegiFok => double.Parse(Latlong.Split(",")[0]);
-        public double HosszusagiFok => double.Parse(Latlong.Split(",")[1]);
+        public double SzelessegiFok => double.Parse(Latlong.Split(",")[0].Replace(".", ","));
+        public double HosszusagiFok => double.Parse(Latlong.Split(",")[1].Replace(".", ","));
 
         public Ad(string sor)
         {
